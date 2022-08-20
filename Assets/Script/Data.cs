@@ -84,7 +84,6 @@ public class Data : MonoBehaviour
                 Debug.Log("불량 감지");
                 return true;
             }
-            Debug.Log(obj.GetComponent<Image>().sprite.name);
         }
         return false;
     }
