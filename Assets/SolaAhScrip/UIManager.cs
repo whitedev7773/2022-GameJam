@@ -5,8 +5,7 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    private ironbutton naB = null;
-    //각 스크립트에서 고철, 고무, 기름, 코인의 값을 받아와서 표시
+    private naturalB natural = null;
     [SerializeField] private TMP_Text coinTxt = null;
     private int coins = 0;
     [SerializeField] private TMP_Text ironTxt = null;
@@ -16,15 +15,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text oilTxt = null;
     private int oils = 0;
     private void Awake() {
-        naB = GetComponent<ironbutton>();
+        natural = GetComponent<naturalB>();
     }
     private void Update() {
         Txts();
     }
     private void Txts() {
         // coinTxt.text = + "개";
-        // ironTxt.text = naB.iron + "개";
-        // rubberTxt.text = ironButton.rubber + "개";
-        oilTxt.text = naB.iron + "개";
+        ironTxt.text = natural.iron + "개";
+        rubberTxt.text = natural.rubber + "개";
+        oilTxt.text = natural.oil + "개";
     }
 }

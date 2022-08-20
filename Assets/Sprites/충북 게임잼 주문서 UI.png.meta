@@ -108,9 +108,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 61
-        y: 104
-        width: 324
-        height: 430
+        y: 102
+        width: 325
+        height: 421
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 451381c1665456e43bd5d89f119725ee
-      internalID: 22197732
+      spriteID: 34c1cde770cc9774c8cb78d290a1dad4
+      internalID: 1793723893
       vertices: []
       indices: 
       edges: []
@@ -128,10 +128,10 @@ TextureImporter:
       name: "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_1"
       rect:
         serializedVersion: 2
-        x: 498
-        y: 325
-        width: 186
-        height: 245
+        x: 497
+        y: 322
+        width: 187
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 436c421fb9903f94eb54b2b8029cf53b
-      internalID: -1533951991
+      spriteID: 8508aeec548604b44984eea2331c5f76
+      internalID: 1411306266
       vertices: []
       indices: 
       edges: []
@@ -149,10 +149,10 @@ TextureImporter:
       name: "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_2"
       rect:
         serializedVersion: 2
-        x: 715
-        y: 325
-        width: 185
-        height: 245
+        x: 714
+        y: 323
+        width: 186
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db42cce3981c0624ea8e12474ab102ec
-      internalID: 1262929730
+      spriteID: 2aa4f4b7c610dc44ca961c00934a226c
+      internalID: 261565299
       vertices: []
       indices: 
       edges: []
@@ -170,10 +170,10 @@ TextureImporter:
       name: "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_3"
       rect:
         serializedVersion: 2
-        x: 925
-        y: 326
-        width: 185
-        height: 243
+        x: 924
+        y: 323
+        width: 186
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bac9f8ab54b0d9748b2ee331d81493e6
-      internalID: 1583864735
+      spriteID: 97a4165ebe2fef946ac5fa9768d60d80
+      internalID: -1077978474
       vertices: []
       indices: 
       edges: []
@@ -192,9 +192,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 591
-        y: 52
+        y: 51
         width: 186
-        height: 245
+        height: 241
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c7d3c875104dc44388171398f785138
-      internalID: 62504397
+      spriteID: 893a5c8e339b835418aacac878a8223e
+      internalID: 632191793
       vertices: []
       indices: 
       edges: []
@@ -212,10 +212,10 @@ TextureImporter:
       name: "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_5"
       rect:
         serializedVersion: 2
-        x: 849
-        y: 52
-        width: 185
-        height: 245
+        x: 848
+        y: 50
+        width: 186
+        height: 242
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1710fba11de5b7e49825512834d30e43
-      internalID: -1228612814
+      spriteID: d6466c16cd9ee9749be811bc0426e092
+      internalID: 1373242760
       vertices: []
       indices: 
       edges: []
@@ -240,12 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_2": 1262929730
-      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_4": 62504397
-      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_5": -1228612814
-      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_0": 22197732
-      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_3": 1583864735
-      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_1": -1533951991
+      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_2": 261565299
+      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_4": 632191793
+      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_5": 1373242760
+      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_0": 1793723893
+      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_3": -1077978474
+      "\uCDA9\uBD81 \uAC8C\uC784\uC7BC \uC8FC\uBB38\uC11C UI_1": 1411306266
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

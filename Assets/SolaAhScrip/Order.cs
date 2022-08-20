@@ -12,21 +12,22 @@ public class Order : MonoBehaviour
     //3초 후 디스트로이 한다.
     //디스트로이 한 직후 주문서 배경에 뽑힌 리스트와 연결된 문장이 나온다?
     [SerializeField] private float waitAmount = 0f;
+    private int randIndex = 0;
     private Image order = null;
     private TextMeshProUGUI orderText = null;
     [SerializeField] private List<Sprite> orderList = new List<Sprite>();
-    [SerializeField] private List<Text> orderTxt = new List<Text>();    
+    [SerializeField] private string[] orderTxt = {};
     private void Awake() {
         order = GameObject.Find("Canvas/Order").GetComponent<Image>();
         orderText = GameObject.Find("Canvas/OrderTxt").GetComponent<TextMeshProUGUI>();
     }
     private void Update() {
-        int randIndex = Random.Range(1, orderList.Count);
+        randIndex = Random.Range(0, orderList.Count - 1);
         order.sprite = orderList[randIndex];
         Invoke("Hiding", waitAmount);
     }
     private void Hiding() {
-        order.sprite = orderList[0]; //완성된 모습의 그림을 내린다.
-        // orderText.text = orderTxt[randIndex];
+        order.sprite = orderList[6];
+        orderText.text = orderTxt[randIndex];
     }
 }
