@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class naturalB : MonoBehaviour
 {
     public Button ironB, rubberB, oilB;
-
     public int iron = 0;
     public int rubber = 0;
     public int oil = 0;
@@ -58,5 +57,4 @@ public class naturalB : MonoBehaviour
             oc = 0;
         }
     }
-
 }
