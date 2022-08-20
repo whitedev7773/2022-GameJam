@@ -3,12 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Gear
+  - SmallWheel
+  - Handle
+  - Seat
+  - Engine
+  - LargeWheel
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Over UI
   - Water
   - UI
   - 
