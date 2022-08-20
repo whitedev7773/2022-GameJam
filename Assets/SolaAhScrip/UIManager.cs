@@ -5,17 +5,25 @@ using TMPro;
 
 public class UIManager : MonoBehaviour
 {
-    //각 스크립트에서 고철, 고무, 기름, 코인의 값을 받아와서 표시
-    [SerializeField] private TMP_Text coinTxt;
+    private naturalB natural = null;
+    [SerializeField] private TMP_Text coinTxt = null;
     private int coins = 0;
-    [SerializeField] private TMP_Text tlqkfTxt;
-    private int tlqkf = 0;
-    [SerializeField] private TMP_Text oilTxt;
+    [SerializeField] private TMP_Text ironTxt = null;
+    private int irons = 0;
+    [SerializeField] private TMP_Text rubberTxt = null;
+    private int rubbers = 0;
+    [SerializeField] private TMP_Text oilTxt = null;
     private int oils = 0;
-    [SerializeField] private TMP_Text dkdkdkd;
-    private int dkdkdkdk = 0;
-
     private void Awake() {
-        
+        natural = GetComponent<naturalB>();
+    }
+    private void Update() {
+        Txts();
+    }
+    private void Txts() {
+        // coinTxt.text = + "개";
+        ironTxt.text = natural.iron + "개";
+        rubberTxt.text = natural.rubber + "개";
+        oilTxt.text = natural.oil + "개";
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,13 +11,23 @@ public class Order : MonoBehaviour
     //order 이미지에 뽑힌 리스트 이미지를 넣고
     //3초 후 디스트로이 한다.
     //디스트로이 한 직후 주문서 배경에 뽑힌 리스트와 연결된 문장이 나온다?
+    [SerializeField] private float waitAmount = 0f;
+    private int randIndex = 0;
+    private Image order = null;
+    private TextMeshProUGUI orderText = null;
     [SerializeField] private List<Sprite> orderList = new List<Sprite>();
-    private Image currentOrder = null;
-    private void Update() {
-        
+    [SerializeField] private string[] orderTxt = {};
+    private void Awake() {
+        order = GameObject.Find("Canvas/Order").GetComponent<Image>();
+        orderText = GameObject.Find("Canvas/OrderTxt").GetComponent<TextMeshProUGUI>();
     }
-    private void CarOrder() {
-        int minType = 1, maxType = 6;
-        int Type = Random.Range(minType, maxType);
+    private void Update() {
+        randIndex = Random.Range(0, orderList.Count - 1);
+        order.sprite = orderList[randIndex];
+        Invoke("Hiding", waitAmount);
+    }
+    private void Hiding() {
+        order.sprite = orderList[5];
+        orderText.text = orderTxt[randIndex];
     }
 }
