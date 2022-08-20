@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,12 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Order : MonoBehaviour
-{
-    //리스트?,,를 만들어서 5종류의 주문을 리스트에 넣어둔다.
-    //랜덤으로 리스트 5종 중 하나를 뽑아 현재 주문에 넣는다.
-    //order 이미지에 뽑힌 리스트 이미지를 넣고
-    //3초 후 디스트로이 한다.
-    //디스트로이 한 직후 주문서 배경에 뽑힌 리스트와 연결된 문장이 나온다?
+{    
     [SerializeField] private float waitAmount = 0f;
     private int randIndex = 0;
     private Image order = null;
@@ -18,16 +14,18 @@ public class Order : MonoBehaviour
     [SerializeField] private List<Sprite> orderList = new List<Sprite>();
     [SerializeField] private string[] orderTxt = {};
     private void Awake() {
-        order = GameObject.Find("Canvas/Order").GetComponent<Image>();
-        orderText = GameObject.Find("Canvas/OrderTxt").GetComponent<TextMeshProUGUI>();
+        order = GameObject.Find("Canvas/Orders/Order").GetComponent<Image>();
+        orderText = GameObject.Find("Canvas/Orders/OrderTxt").GetComponent<TextMeshProUGUI>();
+        randIndex = Random.Range(0, orderList.Count - 1);
     }
-    private void Update() {
+    public void CurrnetOrder() { //현재 손님이 바뀌면서 실행된다. (랜덤으로 주문을 정함 > 스프라이트 입히기 > 3초후 Hiding 실행)
+        orderText.text = ""; //Text 초기화
         randIndex = Random.Range(0, orderList.Count - 1);
         order.sprite = orderList[randIndex];
         Invoke("Hiding", waitAmount);
     }
-    private void Hiding() {
-        order.sprite = orderList[6];
+    private void Hiding() { //CurrentOrder 메서드에 의해 호출된다. (스프라이트를 다시 덮기 > 위에 입혔던 스프라이트와 인덱스가 같은 글 가져오기)
+        order.sprite = orderList[5];
         orderText.text = orderTxt[randIndex];
     }
 }

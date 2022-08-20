@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using System;
 public class UIManager : MonoBehaviour
 {
     private naturalB natural = null;
@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     private int rubbers = 0;
     [SerializeField] private TMP_Text oilTxt = null;
     private int oils = 0;
+
     private void Awake() {
         natural = GetComponent<naturalB>();
     }
