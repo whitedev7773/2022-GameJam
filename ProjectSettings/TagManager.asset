@@ -3,12 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Gear
+  - SmallWheel
+  - Handle
+  - Seat
+  - Engine
+  - LargeWheel
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Over UI
   - Water
   - UI
   - 
@@ -40,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: DelayGage
+    uniqueID: 2740957805
+    locked: 0
+  - name: DelayGageBG
+    uniqueID: 2656080235
     locked: 0
