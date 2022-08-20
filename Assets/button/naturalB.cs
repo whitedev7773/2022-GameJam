@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ironButton : MonoBehaviour
+public class naturalB : MonoBehaviour
 {
     public Button ironB, rubberB, oilB;
 
