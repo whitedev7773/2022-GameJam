@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ironbutton : MonoBehaviour
+public class naturalB : MonoBehaviour
 {
     public Button ironB, rubberB, oilB;
-
     public int iron = 0;
-    int rubber = 0;
-    int oil = 0;
+    public int rubber = 0;
+    public int oil = 0;
     int ic = 0;
     int rc = 0;
     int oc = 0;
@@ -58,5 +57,4 @@ public class ironbutton : MonoBehaviour
             oc = 0;
         }
     }
-
 }
