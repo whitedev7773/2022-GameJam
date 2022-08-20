@@ -27,7 +27,7 @@ public class Order : MonoBehaviour
         Invoke("Hiding", waitAmount);
     }
     private void Hiding() {
-        order.sprite = orderList[6];
+        order.sprite = orderList[5];
         orderText.text = orderTxt[randIndex];
     }
 }

@@ -123,17 +123,8 @@ public class EventTriggerFunction : MonoBehaviour
         {
             return;
         }
-        
-        int Broken_Percentage = 15;
 
-        if (Random.Range(0, 101) <= Broken_Percentage)
-        {
-            GetComponent<Image>().sprite = Broken_Image;
-        }
-        else
-        {
-            GetComponent<Image>().sprite = SummonGear.GetComponent<Image>().sprite;
-        }
+        /////////////////////////////////////// 여기에서 리스트에서 물건 꺼내고 물거넹 따라 스프라이트 바꾸기
 
         if (SummonGear.name == "Engine")
         {
@@ -185,7 +176,15 @@ public class EventTriggerFunction : MonoBehaviour
         Vector3 m_vecMouseDownPos = Input.mousePosition;
         Vector3 pos = Camera.main.ScreenToWorldPoint(m_vecMouseDownPos);
 
-        if ((-6 <= pos.x && pos.x <= 6) && (-1 <= pos.y && pos.y <= 2.5))
+        if (pos.x <= -3 && -1 <= pos.y)
+        {
+            Destroy(this.gameObject);
+            assemble_sound.Play();
+            Destroy(this.gameObject);
+            return;
+        }
+
+        if ((-4 <= pos.x && pos.x <= 6) && (-1 <= pos.y && pos.y <= 2.5))
         {
             if (this.tag == "SmallWheel")
             {
@@ -257,16 +256,15 @@ public class EventTriggerFunction : MonoBehaviour
                 autosnap.engine.enabled = true;
                 data.Assembled_Part.Add("Engine");
             }
+        }
+        assemble_sound.Play();
+        data.TargetAssemble -= 1;
+        Destroy(this.gameObject);
 
-            assemble_sound.Play();
-            data.CompletedAssemble += 1;
-            Destroy(this.gameObject);
-
-            if (data.CompletedAssemble >= data.TargetAssemble)
-            {
-                data.FinishAssemble();
-                complete_sound.Play();
-            }
+        if (data.TargetAssemble <= 0)
+        {
+            data.FinishAssemble();
+            complete_sound.Play();
         }
     }
 }
