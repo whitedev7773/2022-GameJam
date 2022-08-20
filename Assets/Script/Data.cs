@@ -15,6 +15,18 @@ public class Data : MonoBehaviour
 
     private int TotalMoney = 0;
 
+    public float CalculateRoundMoney(float default_money, float time, bool is_correct)
+    {
+        if (is_correct)
+        {
+            return default_money / time;
+        }
+        else
+        {
+            return (default_money / time) * 0.7f;
+        }
+    }
+
     public void AddMoney(int amount)
     {
         TotalMoney += amount;
