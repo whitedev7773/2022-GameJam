@@ -30,4 +30,17 @@ public class UI_Open : MonoBehaviour
             Open = !Open;
         }
     }
+
+    public void Toggle()
+    {
+        if (Open)
+        {
+            animator.Play("Close");
+        }
+        else
+        {
+            animator.Play("Open");
+        }
+        Open = !Open;
+    }
 }
