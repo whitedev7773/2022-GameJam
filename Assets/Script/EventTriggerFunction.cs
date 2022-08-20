@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 public class EventTriggerFunction : MonoBehaviour
 {
@@ -17,6 +19,14 @@ public class EventTriggerFunction : MonoBehaviour
     public Data data;
 
     public bool DragEnable = true;
+
+    public int money = 0;
+
+    public void SetQuest(String[] needs, int target)
+    {
+        autosnap.needs_list = needs;
+        autosnap.TargetAssemble = target;
+    }
 
     public void MoveToMouse()
     {
@@ -102,6 +112,10 @@ public class EventTriggerFunction : MonoBehaviour
         {
             GetComponent<Image>().sprite = Broken_Image;
         }
+        else
+        {
+            GetComponent<Image>().sprite = SummonGear.GetComponent<Image>().sprite;
+        }
 
         if (SummonGear.name == "Engine")
         {
@@ -129,6 +143,11 @@ public class EventTriggerFunction : MonoBehaviour
 
     public void Snap()
     {
+        if (!Array.Exists(autosnap.needs_list, x => x == this.tag))
+        {
+            Destroy(this.gameObject);
+            return;
+        }
         if (this.tag == "SmallWheel" && data.Small_Wheel[0] <= 0)
         {
             return;
@@ -162,6 +181,10 @@ public class EventTriggerFunction : MonoBehaviour
                     Destroy(this.gameObject);
                     return;
                 }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.small_wheel.sprite = Broken_Image;
+                }
                 autosnap.small_wheel.enabled = true;
             }
             else if (this.tag == "LargeWheel")
@@ -170,6 +193,10 @@ public class EventTriggerFunction : MonoBehaviour
                 {
                     Destroy(this.gameObject);
                     return;
+                }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.large_wheel.sprite = Broken_Image;
                 }
                 autosnap.large_wheel.enabled = true;
             }
@@ -180,6 +207,10 @@ public class EventTriggerFunction : MonoBehaviour
                     Destroy(this.gameObject);
                     return;
                 }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.handle.sprite = Broken_Image;
+                }
                 autosnap.handle.enabled = true;
             }
             else if (this.tag == "Seat")
@@ -189,6 +220,10 @@ public class EventTriggerFunction : MonoBehaviour
                     Destroy(this.gameObject);
                     return;
                 }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.seat.sprite = Broken_Image;
+                }
                 autosnap.seat.enabled = true;
             }
             else if (this.tag == "Engine")
@@ -197,6 +232,10 @@ public class EventTriggerFunction : MonoBehaviour
                 {
                     Destroy(this.gameObject);
                     return;
+                }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.engine.sprite = Broken_Image;
                 }
                 autosnap.engine.enabled = true;
             }

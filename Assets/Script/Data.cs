@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -11,6 +12,18 @@ public class Data : MonoBehaviour
     public int[] Large_Wheel = { 0, 0 };
     public int[] Seat = { 0, 0 };
     public int[] Engine = { 0, 0 };
+
+    private int TotalMoney = 0;
+
+    public void AddMoney(int amount)
+    {
+        TotalMoney += amount;
+    }
+
+    public int MoneyValue()
+    {
+        return TotalMoney;
+    }
 
     public void AddHandle(int count)
     {
