@@ -177,7 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SummonGear: {fileID: 972417373}
-  SummonBrokenGear: {fileID: 0}
   Broken_Image: {fileID: 21300000, guid: 8096b7ceefff95f44a8b8b0276d6530c, type: 3}
   animator: {fileID: 0}
   assemble_sound: {fileID: 1569673225}
@@ -5709,7 +5708,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SummonGear: {fileID: 313926512}
-  SummonBrokenGear: {fileID: 0}
   Broken_Image: {fileID: 21300000, guid: a9e6c51765ecc1148b98e88611d13ee8, type: 3}
   animator: {fileID: 0}
   assemble_sound: {fileID: 1569673225}
@@ -6047,7 +6045,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SummonGear: {fileID: 1013360433}
-  SummonBrokenGear: {fileID: 0}
   Broken_Image: {fileID: 21300000, guid: ff6b38d4b2fba40408870b5275e88f4b, type: 3}
   animator: {fileID: 0}
   assemble_sound: {fileID: 1569673225}
@@ -6274,7 +6271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SummonGear: {fileID: 1605186438}
-  SummonBrokenGear: {fileID: 0}
   Broken_Image: {fileID: 21300000, guid: 7c212693c234ab448974aa26d1f3e158, type: 3}
   animator: {fileID: 0}
   assemble_sound: {fileID: 1569673225}
@@ -11381,7 +11377,6 @@ MonoBehaviour:
   Seat: 0100000000000000
   Engine: 0100000000000000
   TargetAssemble: 5
-  title: {fileID: 0}
   needs_list: []
   Assembled_Part: []
   Assembled_Part_Object:
@@ -11697,7 +11692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5283019, g: 0.19188322, b: 0.19188322, a: 1}
+  m_Color: {r: 1, g: 0.4481132, b: 0.4481132, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12032,7 +12027,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SummonGear: {fileID: 174162488}
-  SummonBrokenGear: {fileID: 0}
   Broken_Image: {fileID: 21300000, guid: 7bd4ee060c2aa7048952a3418e0257ab, type: 3}
   animator: {fileID: 0}
   assemble_sound: {fileID: 1569673225}

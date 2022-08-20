@@ -9,7 +9,6 @@ using Random = UnityEngine.Random;
 public class EventTriggerFunction : MonoBehaviour
 {
     public GameObject SummonGear;
-    public GameObject SummonBrokenGear;
     public Sprite Broken_Image;
 
     public Animator animator;
@@ -124,7 +123,7 @@ public class EventTriggerFunction : MonoBehaviour
             return;
         }
 
-        /////////////////////////////////////// 여기에서 리스트에서 물건 꺼내고 물거넹 따라 스프라이트 바꾸기
+        /////////////////////////////////////// 여기에서 리스트에서 물건 꺼내고 물건에 따라 스프라이트 바꾸기
 
         if (SummonGear.name == "Engine")
         {

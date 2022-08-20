@@ -39,6 +39,7 @@ public class Data : MonoBehaviour
 
     public void FinishAssemble()
     {
+        Debug.Log(IsThereBadPart());
         /*// 돈추가
         if (questtime.currentTime <= 0) // 1. 타임 아웃되면 지급 없이 바로 리턴 if
         {
@@ -70,6 +71,8 @@ public class Data : MonoBehaviour
         autoSnap.DisableAllPart();
         Assembled_Part.Clear();
         Assembled_Part_Object.Clear();
+        // 현재 손님 내보내기
+        // 새로운 손님 호출
     }
 
     public bool IsThereBadPart()
@@ -81,6 +84,7 @@ public class Data : MonoBehaviour
                 Debug.Log("불량 감지");
                 return true;
             }
+            Debug.Log(obj.GetComponent<Image>().sprite.name);
         }
         return false;
     }
