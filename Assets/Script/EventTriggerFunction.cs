@@ -12,6 +12,8 @@ public class EventTriggerFunction : MonoBehaviour
     public GameObject SummonBrokenGear;
     public Sprite Broken_Image;
 
+    public Animator animator;
+
     public AudioSource assemble_sound, complete_sound;
 
     public AutoSnap autosnap;
@@ -20,12 +22,28 @@ public class EventTriggerFunction : MonoBehaviour
 
     public bool DragEnable = true;
 
-    public int money = 0;
-
-    public void SetQuest(String[] needs, int target)
+    public void Update()
     {
-        autosnap.needs_list = needs;
-        autosnap.TargetAssemble = target;
+        if (this.tag == "SmallWheel" && data.Small_Wheel[0] <= 0)
+        {
+            return;
+        }
+        else if (this.tag == "LargeWheel" && data.Large_Wheel[0] <= 0)
+        {
+            return;
+        }
+        else if (this.tag == "Handle" && data.Handle[0] <= 0)
+        {
+            return;
+        }
+        else if (this.tag == "Seat" && data.Seat[0] <= 0)
+        {
+            return;
+        }
+        else if (this.tag == "Engine" && data.Engine[0] <= 0)
+        {
+            return;
+        }
     }
 
     public void MoveToMouse()
@@ -143,11 +161,6 @@ public class EventTriggerFunction : MonoBehaviour
 
     public void Snap()
     {
-        if (!Array.Exists(autosnap.needs_list, x => x == this.tag))
-        {
-            Destroy(this.gameObject);
-            return;
-        }
         if (this.tag == "SmallWheel" && data.Small_Wheel[0] <= 0)
         {
             return;
@@ -186,6 +199,7 @@ public class EventTriggerFunction : MonoBehaviour
                     autosnap.small_wheel.sprite = Broken_Image;
                 }
                 autosnap.small_wheel.enabled = true;
+                data.Assembled_Part.Add("SmallWheel");
             }
             else if (this.tag == "LargeWheel")
             {
@@ -199,6 +213,7 @@ public class EventTriggerFunction : MonoBehaviour
                     autosnap.large_wheel.sprite = Broken_Image;
                 }
                 autosnap.large_wheel.enabled = true;
+                data.Assembled_Part.Add("LargeWheel");
             }
             else if (this.tag == "Handle")
             {
@@ -212,6 +227,7 @@ public class EventTriggerFunction : MonoBehaviour
                     autosnap.handle.sprite = Broken_Image;
                 }
                 autosnap.handle.enabled = true;
+                data.Assembled_Part.Add("Handle");
             }
             else if (this.tag == "Seat")
             {
@@ -225,6 +241,7 @@ public class EventTriggerFunction : MonoBehaviour
                     autosnap.seat.sprite = Broken_Image;
                 }
                 autosnap.seat.enabled = true;
+                data.Assembled_Part.Add("Seat");
             }
             else if (this.tag == "Engine")
             {
@@ -238,23 +255,18 @@ public class EventTriggerFunction : MonoBehaviour
                     autosnap.engine.sprite = Broken_Image;
                 }
                 autosnap.engine.enabled = true;
+                data.Assembled_Part.Add("Engine");
             }
 
             assemble_sound.Play();
-            autosnap.CompletedAssemble += 1;
+            data.CompletedAssemble += 1;
             Destroy(this.gameObject);
 
-            if (autosnap.CompletedAssemble >= autosnap.TargetAssemble)
+            if (data.CompletedAssemble >= data.TargetAssemble)
             {
-                FinishAssemble();
+                data.FinishAssemble();
                 complete_sound.Play();
             }
         }
-    }
-    
-    public void FinishAssemble()
-    {
-        autosnap.CompletedAssemble = 0;
-        autosnap.DisableAllPart();
     }
 }
