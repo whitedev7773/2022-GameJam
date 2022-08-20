@@ -755,11 +755,19 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
+<<<<<<< HEAD
   cloudProjectId: 7e4d7c62-c87f-401c-95f0-75b5b610feb9
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: GJ
   organizationId: jkw04257773
+=======
+  cloudProjectId: ace9d6a8-b115-4585-864d-fb9b003add7d
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: GJ (1)
+  organizationId: steamyoung
+>>>>>>> 1c1569faa82a391d2f66a605eb2eaacf3db8387a
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
