@@ -1,14 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 public class EventTriggerFunction : MonoBehaviour
 {
     public GameObject SummonGear;
-    public GameObject SummonBrokenGear;
     public Sprite Broken_Image;
+
+    public Animator animator;
 
     public AudioSource assemble_sound, complete_sound;
 
@@ -17,6 +20,30 @@ public class EventTriggerFunction : MonoBehaviour
     public Data data;
 
     public bool DragEnable = true;
+
+    public void Update()
+    {
+        if (this.tag == "SmallWheel" && data.Small_Wheel[0] <= 0)
+        {
+            return;
+        }
+        else if (this.tag == "LargeWheel" && data.Large_Wheel[0] <= 0)
+        {
+            return;
+        }
+        else if (this.tag == "Handle" && data.Handle[0] <= 0)
+        {
+            return;
+        }
+        else if (this.tag == "Seat" && data.Seat[0] <= 0)
+        {
+            return;
+        }
+        else if (this.tag == "Engine" && data.Engine[0] <= 0)
+        {
+            return;
+        }
+    }
 
     public void MoveToMouse()
     {
@@ -95,13 +122,8 @@ public class EventTriggerFunction : MonoBehaviour
         {
             return;
         }
-        
-        int Broken_Percentage = 15;
 
-        if (Random.Range(0, 101) <= Broken_Percentage)
-        {
-            GetComponent<Image>().sprite = Broken_Image;
-        }
+        /////////////////////////////////////// 여기에서 리스트에서 물건 꺼내고 물건에 따라 스프라이트 바꾸기
 
         if (SummonGear.name == "Engine")
         {
@@ -153,7 +175,15 @@ public class EventTriggerFunction : MonoBehaviour
         Vector3 m_vecMouseDownPos = Input.mousePosition;
         Vector3 pos = Camera.main.ScreenToWorldPoint(m_vecMouseDownPos);
 
-        if ((-6 <= pos.x && pos.x <= 6) && (-1 <= pos.y && pos.y <= 2.5))
+        if (pos.x <= -3 && -1 <= pos.y)
+        {
+            Destroy(this.gameObject);
+            assemble_sound.Play();
+            Destroy(this.gameObject);
+            return;
+        }
+
+        if ((-4 <= pos.x && pos.x <= 6) && (-1 <= pos.y && pos.y <= 2.5))
         {
             if (this.tag == "SmallWheel")
             {
@@ -162,7 +192,12 @@ public class EventTriggerFunction : MonoBehaviour
                     Destroy(this.gameObject);
                     return;
                 }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.small_wheel.sprite = Broken_Image;
+                }
                 autosnap.small_wheel.enabled = true;
+                data.Assembled_Part.Add("SmallWheel");
             }
             else if (this.tag == "LargeWheel")
             {
@@ -171,7 +206,12 @@ public class EventTriggerFunction : MonoBehaviour
                     Destroy(this.gameObject);
                     return;
                 }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.large_wheel.sprite = Broken_Image;
+                }
                 autosnap.large_wheel.enabled = true;
+                data.Assembled_Part.Add("LargeWheel");
             }
             else if (this.tag == "Handle")
             {
@@ -180,7 +220,12 @@ public class EventTriggerFunction : MonoBehaviour
                     Destroy(this.gameObject);
                     return;
                 }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.handle.sprite = Broken_Image;
+                }
                 autosnap.handle.enabled = true;
+                data.Assembled_Part.Add("Handle");
             }
             else if (this.tag == "Seat")
             {
@@ -189,7 +234,12 @@ public class EventTriggerFunction : MonoBehaviour
                     Destroy(this.gameObject);
                     return;
                 }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.seat.sprite = Broken_Image;
+                }
                 autosnap.seat.enabled = true;
+                data.Assembled_Part.Add("Seat");
             }
             else if (this.tag == "Engine")
             {
@@ -198,24 +248,22 @@ public class EventTriggerFunction : MonoBehaviour
                     Destroy(this.gameObject);
                     return;
                 }
+                if (GetComponent<Image>().sprite == Broken_Image)
+                {
+                    autosnap.engine.sprite = Broken_Image;
+                }
                 autosnap.engine.enabled = true;
-            }
-
-            assemble_sound.Play();
-            autosnap.CompletedAssemble += 1;
-            Destroy(this.gameObject);
-
-            if (autosnap.CompletedAssemble >= autosnap.TargetAssemble)
-            {
-                FinishAssemble();
-                complete_sound.Play();
+                data.Assembled_Part.Add("Engine");
             }
         }
-    }
-    
-    public void FinishAssemble()
-    {
-        autosnap.CompletedAssemble = 0;
-        autosnap.DisableAllPart();
+        assemble_sound.Play();
+        data.TargetAssemble -= 1;
+        Destroy(this.gameObject);
+
+        if (data.TargetAssemble <= 0)
+        {
+            data.FinishAssemble();
+            complete_sound.Play();
+        }
     }
 }

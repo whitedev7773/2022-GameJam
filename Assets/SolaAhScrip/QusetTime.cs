@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class QusetTime : MonoBehaviour
 {
     private float qusetTime = 0f;
-    [SerializeField] private Image qusetTimeGage = null;
+    [SerializeField] public Image qusetTimeGage = null;
     [SerializeField] private Image questTimeIcon = null;
     [SerializeField] private float maxTime = 0f;
-    private float currentTime = 0f;
+    public float currentTime = 0f;
     [SerializeField] private Sprite happy = null;
     [SerializeField] private Sprite notbad = null;
-    [SerializeField] private Sprite sobad = null;
+    [SerializeField] private Sprite sobad   = null;
     private void Awake() {
         currentTime = maxTime;
     }
