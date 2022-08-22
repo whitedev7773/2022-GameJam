@@ -7,6 +7,7 @@ public class Price : MonoBehaviour
     public int iron, rubber, fuel;
     public resources data;
     public string product;
+    
     public void Buy()
     {
         if (data.iron >= iron && data.rubber >= rubber && data.fuel >= fuel)

@@ -5,14 +5,11 @@ using UnityEngine;
 
 public class UI_Open : MonoBehaviour
 {
-    public Animator animator;
+    public Animator Create;
+    public Animator Collect;
+    public Animator Click;
 
     public bool Open = false;
-
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -21,26 +18,38 @@ public class UI_Open : MonoBehaviour
         {
             if (Open)
             {
-                animator.Play("Close");
+                Create.Play("Close");
             }
             else
             {
-                animator.Play("Open");
+                Create.Play("Open");
             }
             Open = !Open;
         }
-    }
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            if (Open)
+            {
+                Collect.Play("Close");
+            }
+            else
+            {
+                Collect.Play("Open");
+            }
+            Open = !Open;
+        }
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            if (Open)
+            {
+                Click.Play("Close");
+            }
+            else
+            {
+                Click.Play("Open");
+            }
+            Open = !Open;
+        }
 
-    public void Toggle()
-    {
-        if (Open)
-        {
-            animator.Play("Close");
-        }
-        else
-        {
-            animator.Play("Open");
-        }
-        Open = !Open;
     }
 }
