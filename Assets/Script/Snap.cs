@@ -22,7 +22,7 @@ public class Snap : MonoBehaviour
     public void MagneticSnap()
     {
         // 마우스를 땐 후 마우스의 위치 가져오기
-        Vector2 target = Camera.main.WorldToScreenPoint(Input.mousePosition);
+        Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         // 마우스가 조립칸에 있을 때
         if ((181 < target.x && target.x < 500) && (120 < target.y && target.y < 220))
