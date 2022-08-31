@@ -11,9 +11,6 @@ public class Car : MonoBehaviour
     public bool Engine = false;       // 엔진
     public bool Seat = false;         // 운전석
 
-    // 조립되어야하는 파트의 갯수
-    public int target_assemble_count = 0;
-
     public void InitCar(bool detached_all = false)
     {
         // 차를 초기화하는 함수. true를 받으면 모든 부품이 만들어진 채로 초기화됨.

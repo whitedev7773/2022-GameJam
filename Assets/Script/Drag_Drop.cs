@@ -1,42 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Drag_Drop : MonoBehaviour
+public class Drag_Drop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    public resources res;
+    public bool actived = true;
+    public static Vector2 defaultposition;
 
+    public Snap snap;
 
-    private void Update()
+    void IBeginDragHandler.OnBeginDrag(PointerEventData eventData) //드래그시작할 때
     {
-        if (Gate())
-        {
-            transform.localScale = new Vector3(0, 0, 0);
-        }
-        else
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
+        defaultposition = this.transform.position;
     }
 
-    public void MoveToMouse()
+    void IDragHandler.OnDrag(PointerEventData eventData) //드래그중일 때
     {
-        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log(target);
-        transform.position = target;
+        Vector2 currentPos = Input.mousePosition;
+        this.transform.position = currentPos;
     }
 
-    public bool Gate()
+    void IEndDragHandler.OnEndDrag(PointerEventData eventData) //드래그 끝났을 때
     {
-        if (
-        (this.tag == "Engine" && res.engine.Count <= 0) ||
-        (this.tag == "SmallWheel" && res.small_wheel.Count <= 0) ||
-        (this.tag == "Handle" && res.handle.Count <= 0) ||
-        (this.tag == "Seat" && res.seat.Count <= 0) ||
-        (this.tag == "LargeWheel" && res.big_wheel.Count <= 0))
-        {
-            return true;
-        }
-        return false;
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        this.transform.position = defaultposition;
+
+        // 여기서 부품 놓기
+        snap.SnapObject(this.gameObject);
+    }
+
+    public void Enable()
+    {
+        actived = true;
+    }
+    public void Disable()
+    {
+        actived = false;
     }
 }
