@@ -8,15 +8,22 @@ public class QusetTime : MonoBehaviour
     private float qusetTime = 0f;
     [SerializeField] public Image qusetTimeGage = null;
     [SerializeField] private Image questTimeIcon = null;
-    [SerializeField] private float maxTime = 0f;
+    public float maxTime = 0f;
     public float currentTime = 0f;
     [SerializeField] private Sprite happy = null;
     [SerializeField] private Sprite notbad = null;
     [SerializeField] private Sprite sobad   = null;
+
+    public bool start = false;
+    
     private void Awake() {
         currentTime = maxTime;
     }
     private void Update() {
+        if (!start)
+        {
+            return;
+        }
         TimerGage();
         TimerIcon();
     }
@@ -34,5 +41,17 @@ public class QusetTime : MonoBehaviour
             questTimeIcon.sprite = notbad;
         }
         else {questTimeIcon.sprite = sobad;}
+    }
+
+    public void StartTime()
+    {
+        start = true;
+    }
+
+    public void ResetTime()
+    {
+        start = false;
+        currentTime = 1;
+        qusetTimeGage.fillAmount = 1;
     }
 }

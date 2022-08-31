@@ -14,8 +14,8 @@ public class Order : MonoBehaviour
     [SerializeField] private List<Sprite> orderList = new List<Sprite>();
     [SerializeField] private string[] orderTxt = {};
     private void Awake() {
-        order = GameObject.Find("Canvas/Orders/Order").GetComponent<Image>();
-        orderText = GameObject.Find("Canvas/Orders/OrderTxt").GetComponent<TextMeshProUGUI>();
+        order = GameObject.Find("메인/Orders/Order").GetComponent<Image>();
+        orderText = GameObject.Find("메인/Orders/OrderTxt").GetComponent<TextMeshProUGUI>();
         randIndex = Random.Range(0, orderList.Count - 1);
     }
     public void CurrnetOrder() { //현재 손님이 바뀌면서 실행된다. (랜덤으로 주문을 정함 > 스프라이트 입히기 > 3초후 Hiding 실행)

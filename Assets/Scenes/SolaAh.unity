@@ -208,13 +208,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 28.3
+  m_fontSizeBase: 28.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 0
   m_fontSizeMax: 0
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -583,7 +583,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 735, y: 375}
+  m_AnchoredPosition: {x: 712.99994, y: 375}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &447524831
@@ -716,7 +716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 597, y: 372}
+  m_AnchoredPosition: {x: 575, y: 372}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455879988
@@ -2207,7 +2207,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 34, y: -85}
-  m_SizeDelta: {x: 150, y: 20}
+  m_SizeDelta: {x: 181.2, y: 41.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581830790
 MonoBehaviour:
@@ -2262,7 +2262,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2350,20 +2350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21346fe82b848f44c965e5d259e95865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aa:
-  - a:
-    - {fileID: -1239733749, guid: df93c857c94923d4896ff21e1389b4e5, type: 3}
-    - {fileID: 120812927, guid: df93c857c94923d4896ff21e1389b4e5, type: 3}
-    - {fileID: -2094751800, guid: df93c857c94923d4896ff21e1389b4e5, type: 3}
-  - a:
-    - {fileID: -899112218, guid: 2e8622fff9949354dad1e816b9fc3e4e, type: 3}
-    - {fileID: -59160397, guid: 2e8622fff9949354dad1e816b9fc3e4e, type: 3}
-    - {fileID: 1246463210, guid: 2e8622fff9949354dad1e816b9fc3e4e, type: 3}
-  - a:
-    - {fileID: 1354243047, guid: 40385852cf4b4084697780d8ab6a66a4, type: 3}
-    - {fileID: -769447811, guid: 40385852cf4b4084697780d8ab6a66a4, type: 3}
-    - {fileID: 1115678579, guid: 40385852cf4b4084697780d8ab6a66a4, type: 3}
-  currnetTime: 0
 --- !u!1 &1693951867
 GameObject:
   m_ObjectHideFlags: 0

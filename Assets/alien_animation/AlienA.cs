@@ -11,6 +11,7 @@ public class A
 }
 public class AlienA : MonoBehaviour
 {
+    /*
     public List<A> a = new List<A>();
     public Sprite t;
     private float qusetTime = 0f;
@@ -74,7 +75,7 @@ public class AlienA : MonoBehaviour
                 questTimeIcon.sprite = sobad;
             }
         }
-        if (A.Contains(2s))
+        if (A.Contains(2))
         {
             if (qusetTimeGage.fillAmount >= 0.5)
             {
@@ -90,4 +91,5 @@ public class AlienA : MonoBehaviour
             }
         }
     } 
+    */
 }

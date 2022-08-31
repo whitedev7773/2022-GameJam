@@ -24,6 +24,13 @@ public class Data : MonoBehaviour
 
     public AutoSnap autoSnap;
 
+    public Text MoneyDisplay;
+
+    private void Update()
+    {
+        //MoneyDisplay.text = TotalMoney.ToString();
+    }
+
     public bool IsCorrectA_and_B(List<string> A, List<string> B)
     {
         A.Sort();
@@ -40,7 +47,6 @@ public class Data : MonoBehaviour
     public void FinishAssemble()
     {
         Debug.Log(IsThereBadPart());
-        /*// 돈추가
         if (questtime.currentTime <= 0) // 1. 타임 아웃되면 지급 없이 바로 리턴 if
         {
             autoSnap.DisableAllPart();
@@ -67,12 +73,10 @@ public class Data : MonoBehaviour
         else // 5. 남은 시간이 절반 이상이라면 10원 지급 후 리턴 else
         {
             AddMoney(10);
-        }*/
+        }
         autoSnap.DisableAllPart();
         Assembled_Part.Clear();
         Assembled_Part_Object.Clear();
-        // 현재 손님 내보내기
-        // 새로운 손님 호출
     }
 
     public bool IsThereBadPart()
