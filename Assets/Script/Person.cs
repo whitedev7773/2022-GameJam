@@ -7,30 +7,35 @@ using UnityEngine.UI;
 public class Person : MonoBehaviour
 {
     public Animator animator;
+    public Image cunPerson;
 
-    public Sprite default_order;
-    public Sprite[] order_papers;
-    public string[] order_messages;
+    [SerializeField] private List<Sprite> personColor = new List<Sprite>();
 
-    public Image order;
-    public TextMeshProUGUI message;
+    public Sprite default_order; //ê¸°ë³¸ ì£¼ë¬¸ì„œ
+    public Sprite[] order_papers; //ì£¼ë¬¸ì„œ ìŠ¤í”„ë¼ì´íŠ¸
+    public string[] order_messages; //ì£¼ë¬¸ì„œ ë¶€ê°€ì„¤ëª…
+
+    public Image order; //ì£¼ë¬¸ ë³¸ì²´
+    public TextMeshProUGUI message; //ë¶€ê°€ ì„¤ëª… ë³¸ì²´
 
     public QusetTime time;
 
     public int count_of_order;
     private int random_order_number = 0;
+    private int ran = 0;
 
-    // Ã³À½½ÃÀÛ ¹× ÁÖ¹® ¿Ï·á ÈÄ »õ·Î¿î ÁÖ¹®±îÁöÀÇ µô·¹ÀÌ ½Ã°£(ÃÊ)
+    // Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¹ï¿½ ï¿½Ï·ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½(ï¿½ï¿½)
     public int order_delay;
 
     private void Start()
     {
         Invoke("StartFirst", order_delay);
     }
-
-    private void Update()
-    {
-
+    private void Update() {
+        SpriteChange();
+    }
+    private void curColor() {
+        ran = Random.Range(0, 2);
     }
 
     private void StartFirst()
@@ -41,7 +46,9 @@ public class Person : MonoBehaviour
 
     public void PersonEnter()
     {
+        Debug.Log("1");
         time.start = true;
+        curColor();
         animator.Play("Person_In");
     }
 
@@ -62,7 +69,7 @@ public class Person : MonoBehaviour
         random_order_number = Random.Range(0, count_of_order);
         order.sprite = order_papers[random_order_number];
 
-        // ÁÖ¹®¿¡ ¸Â°Ô ÀÚÃ¼ º¯°æ
+        // ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½Â°ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
         switch (random_order_number)
         {
             case 0:
@@ -86,7 +93,7 @@ public class Person : MonoBehaviour
                 break;
         }
 
-        // wait_timeÃÊ ÈÄ ¸Þ½ÃÁö·Î º¯°æ
+        // wait_timeï¿½ï¿½ ï¿½ï¿½ ï¿½Þ½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         Invoke("ChangeToMessage", order_delay);
     }
 
@@ -94,5 +101,14 @@ public class Person : MonoBehaviour
     {
         order.sprite = default_order;
         message.text = order_messages[random_order_number];
+    }
+    private void SpriteChange() {
+        if (time.qusetTimeGage.fillAmount > 0.5) {
+            cunPerson.sprite = personColor[ran];
+        }
+        else if (time.qusetTimeGage.fillAmount > 0.25) {
+            cunPerson.sprite = personColor[ran + 3];
+        }
+        else {cunPerson.sprite = personColor[ran + 6];}
     }
 }
