@@ -1134,7 +1134,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uC774\uC124\uC544 \uAE40\uB098\uC601 \uC7A5\uAE30\uC6D0 \uCD5C\uC6A9\uB355
-    \uD669\uD61C\uB791"
+    \uD55C\uD61C\uB791"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 586e84ce4078a0440b741b71bfae450a, type: 2}
   m_sharedMaterial: {fileID: -3195577404717319068, guid: 586e84ce4078a0440b741b71bfae450a, type: 2}
