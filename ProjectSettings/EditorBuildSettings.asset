@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IntroScene.unity
     guid: 51a3a6d9a5b125f40bb485f165d3168f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: aaca5208a997c934e99cf7a589d5b2de
+  - enabled: 1
+    path: Assets/Scenes/Giwonte.unity
+    guid: 6c3b2e0b3dfbe994cb6a60021af98c25
   m_configObjects: {}
