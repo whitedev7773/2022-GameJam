@@ -46,7 +46,6 @@ public class Person : MonoBehaviour
 
     public void PersonEnter()
     {
-        Debug.Log("1");
         time.start = true;
         curColor();
         animator.Play("Person_In");

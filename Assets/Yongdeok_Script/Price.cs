@@ -4,27 +4,25 @@ using UnityEngine;
 
 public class Price : MonoBehaviour
 {
-    public int iron, rubber, fuel;
-    public resources data;
+    public int pricedd;
+    public UIManager uiM;
+    public resources data; //가지고 있는 iron, rubber, fuel의 값을 가져오기 위함
     public string product;
     
     public void Buy()
     {
-        if (data.iron >= iron && data.rubber >= rubber && data.fuel >= fuel)
+        if (uiM.coins >= pricedd)
         {
-            data.iron -= iron;
-            data.rubber -= rubber;
-            data.fuel -= fuel;
-
+            uiM.coins -= pricedd;
             int per;
             if (Random.Range(1, 101) < 30)
             {
                 per = 1;
             }
-            else {
+            else 
+            {
                 per = 0;
             }
-
 
             if (product == "big_wheel")
             {
