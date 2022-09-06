@@ -7,7 +7,7 @@ public class Main : MonoBehaviour
 {
     public void OnStartClick()
     {
-        SceneManager.LoadScene("GiwonTe");
+        SceneManager.LoadScene("SolaAhh2");
     }
 
     public void OnExitClick()

@@ -12,11 +12,6 @@ public class Car : MonoBehaviour
     public bool Engine = false;       // 엔진
     public bool Seat = false;         // 운전석
 
-<<<<<<< HEAD
-=======
-    // 조립되어야하는 파트의 갯수
-    public int target_assemble_count = 0;
-
     private void Awake() {
         order = GameObject.Find("메인/Orders/Order").GetComponent<Order>();
     }
@@ -60,7 +55,6 @@ public class Car : MonoBehaviour
         
             }
         }
->>>>>>> f0913b47e63216b46c466112ff1a91d14d272d99
     public void InitCar(bool detached_all = false)
     {
         // 차를 초기화하는 함수. true를 받으면 모든 부품이 만들어진 채로 초기화됨.
@@ -73,10 +67,10 @@ public class Car : MonoBehaviour
         return;
     }
 
-    public bool IsSameWith(Car other_car = null)
+    public bool IsSameWith(Car B = null)
     {
         // 자동차를 전달받지 않았으면 false 반환
-        if (!other_car)
+        if (!B)
         {
             Debug.Log("비교할 차를 전달받지 못함");
             return false;
@@ -87,11 +81,13 @@ public class Car : MonoBehaviour
                 this.SmallWheel, this.LargeWheel, this.Handle, this.Engine, this.Seat
             };
             bool[] other_car_parts = {
-                other_car.SmallWheel, other_car.LargeWheel, other_car.Handle, other_car.Engine, other_car.Seat
+                B.SmallWheel, B.LargeWheel, B.Handle, B.Engine, B.Seat
             };
 
             for (int i=0; i<5; i++)
             {
+                Debug.Log($"P:{this_car_parts[i]} O:{other_car_parts[i]}");
+
                 // i번째 부품 일치하지 않으면 false 반환
                 if (this_car_parts[i] != other_car_parts[i])
                 {

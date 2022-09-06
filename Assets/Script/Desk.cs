@@ -8,6 +8,9 @@ public class Desk : MonoBehaviour
     // 자신이 조립한 정보가 담긴 Car클래스가 존재하는 오브젝트용 스크립트
 
     public Image SmallWheel, LargeWheel, Handle, Seat, Engine;
+    public resources data;
+    public Car OrderCar;
+    public Person person;
 
     public void Clear()
     {
@@ -29,29 +32,29 @@ public class Desk : MonoBehaviour
             return;
         }
 
-        int money = 0;
         QusetTime time = GameObject.Find("GameManager").GetComponent<QusetTime>();
 
         GameObject.Find("Check").GetComponent<AudioSource>().Play();
 
-        Clear();
-        if (GetComponent<Car>().IsSameWith(GetComponent<Car>()))
+        Debug.Log(GetComponent<Car>().IsSameWith(OrderCar));
+
+        if (GetComponent<Car>().IsSameWith(OrderCar))
         {
             // 주문과 일치한다면
             if (time.currentTime >= time.maxTime / 2)
             {
                 // 시간의 1/2 이상을 남겼을 때
-                money += 10;
+                data.coin += 10;
             }
             else if (time.currentTime >= time.maxTime / 4)
             {
                 // 시간의 1/4 이상을 남겼을 때
-                money += 7;
+                data.coin += 7;
             }
             else if (time.currentTime > 0)
             {
                 // 시간의 1/4 이하, 0 이상일 때
-                money += 5;
+                data.coin += 5;
             }
             else if (time.currentTime <= 0)
             {
@@ -65,17 +68,17 @@ public class Desk : MonoBehaviour
             if (time.currentTime >= time.maxTime / 2)
             {
                 // 시간의 1/2 이상을 남겼을 때
-                money += 3;
+                data.coin += 3;
             }
             else if (time.currentTime >= time.maxTime / 4)
             {
                 // 시간의 1/4 이상을 남겼을 때
-                money += 2;
+                data.coin += 2;
             }
             else if (time.currentTime > 0)
             {
                 // 시간의 1/3 이하, 0 이상일 때
-                money += 1;
+                data.coin += 1;
             }
             else if (time.currentTime <= 0)
             {
@@ -84,6 +87,8 @@ public class Desk : MonoBehaviour
             }
         }
 
-        Debug.Log(money);
+        Clear();
+        person.PersonExit();
+        person.InvokeStart();
     }
 }

@@ -9,7 +9,7 @@ public class Snap : MonoBehaviour
 {
     // 드래그 종료 후 스폰될 이미지들
     public Image SmallWheel, LargeWheel, Handle, Seat, Engine;
-    public Car car = new Car();
+    public Car car;
 
     private void Start()
     {
