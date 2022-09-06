@@ -37,8 +37,6 @@ public class Drag_Drop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
         {
             // 작업대에 놓았을 때
             snap.SnapObject(this.gameObject);
-            GetComponent<AudioSource>().pitch = Random.Range(0.7f, 1.7f);
-            GetComponent<AudioSource>().Play();
         }
         else
         {
