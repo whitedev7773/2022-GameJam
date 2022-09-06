@@ -8,10 +8,10 @@ using UnityEngine.UI;
 public class Order : MonoBehaviour
 {    
     [SerializeField] private float waitAmount = 0f;
-    private int randIndex = 0;
+    public int randIndex = 0;
     private Image order = null;
     private TextMeshProUGUI orderText = null;
-    [SerializeField] private List<Sprite> orderList = new List<Sprite>();
+    [SerializeField] public List<Sprite> orderList = new List<Sprite>();
     [SerializeField] private string[] orderTxt = {};
     private void Awake() {
         order = GameObject.Find("메인/Orders/Order").GetComponent<Image>();

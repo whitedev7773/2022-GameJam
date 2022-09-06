@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     private naturalB natural = null;
     [SerializeField] private TMP_Text coinTxt = null;
-    private int coins = 0;
+    public int coins = 0;
     [SerializeField] private TMP_Text ironTxt = null;
     private int irons = 0;
     [SerializeField] private TMP_Text rubberTxt = null;
@@ -22,9 +22,6 @@ public class UIManager : MonoBehaviour
         Txts();
     }
     private void Txts() {
-        // coinTxt.text = + "개";
-        ironTxt.text = natural.iron + "개";
-        rubberTxt.text = natural.rubber + "개";
-        oilTxt.text = natural.oil + "개";
+        coinTxt.text = coins + "개";
     }
 }

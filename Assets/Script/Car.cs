@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
+    private Order order = null;
     // 자동차 구성요소들. true면 존재한다는 뜻임.
     public bool SmallWheel = false;   // 앞바퀴
     public bool LargeWheel = false;   // 뒷바퀴
@@ -11,6 +12,55 @@ public class Car : MonoBehaviour
     public bool Engine = false;       // 엔진
     public bool Seat = false;         // 운전석
 
+<<<<<<< HEAD
+=======
+    // 조립되어야하는 파트의 갯수
+    public int target_assemble_count = 0;
+
+    private void Awake() {
+        order = GameObject.Find("메인/Orders/Order").GetComponent<Order>();
+    }
+    public void rotlqkf() { //주문 받는 스크립트에서 현재 주문을 담는 리스트의 인덱스를 구해와서 스위치로 비교한,, 하지만 예외 처리가 없는
+        switch(order.randIndex) {
+            case 1 : //전부 다
+                SmallWheel = true;
+                LargeWheel = true;
+                Handle = true;
+                Engine = true;
+                Seat = true;
+                break;
+            case 2 : //핸들 없는
+                SmallWheel = true;
+                LargeWheel = true;
+                Handle = false;
+                Engine = true;
+                Seat = true;
+                break;
+            case 3 : //큰 바퀴 없는
+                SmallWheel = true;
+                LargeWheel = false;
+                Handle = true;
+                Engine = true;
+                Seat = true;
+                break;
+            case 4 : //의자 없는
+                SmallWheel = true;
+                LargeWheel = true;
+                Handle = true;
+                Engine = true;
+                Seat = false;
+                break;
+            case 5 : //엔진 없는
+                SmallWheel = true;
+                LargeWheel = true;
+                Handle = true;
+                Engine = false;
+                Seat = true;
+                break;
+        
+            }
+        }
+>>>>>>> f0913b47e63216b46c466112ff1a91d14d272d99
     public void InitCar(bool detached_all = false)
     {
         // 차를 초기화하는 함수. true를 받으면 모든 부품이 만들어진 채로 초기화됨.
