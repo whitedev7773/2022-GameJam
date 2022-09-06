@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Giwonte.unity
     guid: 6c3b2e0b3dfbe994cb6a60021af98c25
+  - enabled: 1
+    path: Assets/Scenes/SolaAhh2.unity
+    guid: be4161e6c85375f4baf564f4b404ea4d
   m_configObjects: {}
