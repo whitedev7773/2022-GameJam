@@ -12,6 +12,8 @@ public class Desk : MonoBehaviour
     public Car OrderCar;
     public Person person;
 
+    public Snap snap;
+
     public void Clear()
     {
         // 책상 정리 함수
@@ -38,23 +40,25 @@ public class Desk : MonoBehaviour
 
         Debug.Log(GetComponent<Car>().IsSameWith(OrderCar));
 
+        int money = 0;
+
         if (GetComponent<Car>().IsSameWith(OrderCar))
         {
             // 주문과 일치한다면
             if (time.currentTime >= time.maxTime / 2)
             {
                 // 시간의 1/2 이상을 남겼을 때
-                data.coin += 10;
+                money = 10;
             }
             else if (time.currentTime >= time.maxTime / 4)
             {
                 // 시간의 1/4 이상을 남겼을 때
-                data.coin += 7;
+                money = 7;
             }
             else if (time.currentTime > 0)
             {
                 // 시간의 1/4 이하, 0 이상일 때
-                data.coin += 5;
+                money = 5;
             }
             else if (time.currentTime <= 0)
             {
@@ -68,17 +72,17 @@ public class Desk : MonoBehaviour
             if (time.currentTime >= time.maxTime / 2)
             {
                 // 시간의 1/2 이상을 남겼을 때
-                data.coin += 3;
+                money = 3;
             }
             else if (time.currentTime >= time.maxTime / 4)
             {
                 // 시간의 1/4 이상을 남겼을 때
-                data.coin += 2;
+                money = 2;
             }
             else if (time.currentTime > 0)
             {
                 // 시간의 1/3 이하, 0 이상일 때
-                data.coin += 1;
+                money = 1;
             }
             else if (time.currentTime <= 0)
             {
@@ -87,8 +91,33 @@ public class Desk : MonoBehaviour
             }
         }
 
+        if (IsThereBadGear())
+        {
+            data.coin += money / 2;
+        }
+        else
+        {
+            data.coin += money;
+        }
+
         Clear();
         person.PersonExit();
         person.InvokeStart();
+    }
+
+    private bool IsThereBadGear()
+    {
+        Image[] Gears = { snap.SmallWheel, snap.LargeWheel, snap.Handle, snap.Seat, snap.Engine };
+        Sprite[] BadGears = { snap.BrokenSmallWheel, snap.BrokenLargeWheel, snap.BrokenHandle, snap.BrokenSeat, snap.BrokenEngine };
+        
+        for (int i=0; i<5; i++)
+        {
+            if (Gears[i].sprite == BadGears[i])
+            {
+                return true;
+            }
+        }
+        
+        return false;
     }
 }

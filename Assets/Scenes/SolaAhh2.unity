@@ -1040,8 +1040,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pricedd: 1
-  uiM: {fileID: 523863473}
-  data: {fileID: 0}
+  data: {fileID: 669719036}
   product: big_wheel
 --- !u!114 &312904566
 MonoBehaviour:
@@ -1952,16 +1951,16 @@ MonoBehaviour:
   iron: 0
   rubber: 0
   fuel: 0
-  coin: 0
+  coin: 100
   Iron_display: {fileID: 672103498}
   Rubber_display: {fileID: 1654807715}
   Oil_display: {fileID: 982157349}
   Coin_Display: {fileID: 383847902}
-  big_wheel: 00000000
-  small_wheel: 00000000
-  engine: 00000000
-  seat: 00000000
-  handle: 00000000
+  big_wheel: 
+  small_wheel: 
+  engine: 
+  seat: 
+  handle: 
 --- !u!81 &669719037
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2592,8 +2591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pricedd: 3
-  uiM: {fileID: 523863473}
-  data: {fileID: 0}
+  data: {fileID: 669719036}
   product: engine
 --- !u!114 &783197204
 MonoBehaviour:
@@ -3623,8 +3621,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pricedd: 4
-  uiM: {fileID: 523863473}
-  data: {fileID: 0}
+  data: {fileID: 669719036}
   product: seat
 --- !u!114 &1021278762
 MonoBehaviour:
@@ -4365,6 +4362,17 @@ MonoBehaviour:
   Handle: {fileID: 1321364923}
   Seat: {fileID: 858025365}
   Engine: {fileID: 1243233134}
+  RightSmallWheel: {fileID: 21300000, guid: b2aae95c1a491ce42b8183c0b2e681ca, type: 3}
+  RightLargeWheel: {fileID: 21300000, guid: 53ea3f3dd03e7714cbb3c7efbf824f53, type: 3}
+  RightHandle: {fileID: 21300000, guid: f3d4c5069d90d284fa61cfd7632b23d6, type: 3}
+  RightSeat: {fileID: 21300000, guid: 6e14ecbacaad19e4ba7ee6c97a374b5c, type: 3}
+  RightEngine: {fileID: 21300000, guid: bfd7bbf9c1fd237489359b356602d715, type: 3}
+  BrokenSmallWheel: {fileID: 21300000, guid: 7c212693c234ab448974aa26d1f3e158, type: 3}
+  BrokenLargeWheel: {fileID: 21300000, guid: a9e6c51765ecc1148b98e88611d13ee8, type: 3}
+  BrokenHandle: {fileID: 21300000, guid: ff6b38d4b2fba40408870b5275e88f4b, type: 3}
+  BrokenSeat: {fileID: 21300000, guid: 8096b7ceefff95f44a8b8b0276d6530c, type: 3}
+  BrokenEngine: {fileID: 21300000, guid: 7bd4ee060c2aa7048952a3418e0257ab, type: 3}
+  data: {fileID: 669719036}
   car: {fileID: 1126072384}
 --- !u!114 &1126072384
 MonoBehaviour:
@@ -4403,6 +4411,7 @@ MonoBehaviour:
   data: {fileID: 669719036}
   OrderCar: {fileID: 1427680046}
   person: {fileID: 1427680043}
+  snap: {fileID: 1126072383}
 --- !u!1 &1144490222
 GameObject:
   m_ObjectHideFlags: 0
@@ -4953,8 +4962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pricedd: 5
-  uiM: {fileID: 523863473}
-  data: {fileID: 0}
+  data: {fileID: 669719036}
   product: handle
 --- !u!114 &1237382242
 MonoBehaviour:
@@ -8906,8 +8914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pricedd: 2
-  uiM: {fileID: 523863473}
-  data: {fileID: 0}
+  data: {fileID: 669719036}
   product: small_wheel
 --- !u!114 &1959177241
 MonoBehaviour:
