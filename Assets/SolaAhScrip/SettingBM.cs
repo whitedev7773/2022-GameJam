@@ -7,11 +7,15 @@ using UnityEngine.UI;
 public class SettingBM : MonoBehaviour
 {
     [SerializeField] private GameObject settingPn;
-    public void Setting() {
-        if (settingPn.activeSelf ) {
+
+    public void Setting()
+    {
+        if (settingPn.activeSelf)
+        {
             settingPn.SetActive(false);
         }
-        else {
+        else
+        {
             settingPn.SetActive(true);
         }
     }
