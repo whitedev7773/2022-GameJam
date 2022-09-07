@@ -12,6 +12,27 @@ public class Car : MonoBehaviour
     public bool Engine = false;       // 엔진
     public bool Seat = false;         // 운전석
 
+    public int AssembledPartCount = 0; // 조립파트 갯수
+
+    private void Update()
+    {
+        bool[] this_car_parts = {
+                this.SmallWheel, this.LargeWheel, this.Handle, this.Engine, this.Seat
+        };
+
+        int count = 0;
+
+        for (int i=0; i<5; i++)
+        {
+            if (this_car_parts[i])
+            {
+                count += 1;
+            }
+        }
+
+        AssembledPartCount = count;
+    }
+
     private void Awake() {
         order = GameObject.Find("메인/Orders/Order").GetComponent<Order>();
     }
