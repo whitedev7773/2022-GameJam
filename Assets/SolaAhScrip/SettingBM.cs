@@ -11,6 +11,8 @@ public class SettingBM : MonoBehaviour
         if (settingPn.activeSelf ) {
             settingPn.SetActive(false);
         }
-        else {settingPn.SetActive(true);}
+        else {
+            settingPn.SetActive(true);
+        }
     }
 }
