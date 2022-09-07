@@ -63,7 +63,6 @@ public class Desk : MonoBehaviour
             else if (time.currentTime <= 0)
             {
                 // 시간이 0일때
-                return;
             }
         }
         else
@@ -87,7 +86,6 @@ public class Desk : MonoBehaviour
             else if (time.currentTime <= 0)
             {
                 // 시간이 0일때
-                return;
             }
         }
 

@@ -61,8 +61,8 @@ public class Person : MonoBehaviour
 
     public void PersonExit()
     {
-        time.start = true;
-        time.currentTime = time.maxTime;
+        time.start = false;
+        time.ResetTime();
 
         order.sprite = order_papers[5];
         message.text = "";
