@@ -6,13 +6,7 @@ using UnityEngine.UI;
 
 public class resources : MonoBehaviour
 {
-    public int iron = 0;
-    public int rubber = 0;
-    public int fuel = 0;
-
     public int coin = 0;
-
-    public Text Iron_display, Rubber_display, Oil_display;
     public TextMeshProUGUI Coin_Display;
 
     public List<int> big_wheel = new List<int>();
@@ -23,9 +17,6 @@ public class resources : MonoBehaviour
 
     private void Update()
     {
-        Iron_display.text = $"{iron}개 보유 중";
-        Rubber_display.text = $"{rubber}개 보유 중";
-        Oil_display.text = $"{fuel}개 보유 중";
         Coin_Display.text = $"{coin}";
     }
 }

@@ -7,7 +7,6 @@ public class UI_Open : MonoBehaviour
 {
     public Animator Create;
     public Animator Collect;
-    public Animator Click;
 
     public bool Open = false;
 
@@ -23,7 +22,6 @@ public class UI_Open : MonoBehaviour
             else
             {
                 Collect.Play("Close");
-                Click.Play("Close");
                 Create.Play("Open");
             }
             Open = !Open;
@@ -37,22 +35,7 @@ public class UI_Open : MonoBehaviour
             else
             {
                 Create.Play("Close");
-                Click.Play("Close");
                 Collect.Play("Open");
-            }
-            Open = !Open;
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            if (Open)
-            {
-                Click.Play("Close");
-            }
-            else
-            {
-                Collect.Play("Close");
-                Create.Play("Close");
-                Click.Play("Open");
             }
             Open = !Open;
         }
