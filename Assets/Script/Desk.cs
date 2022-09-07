@@ -27,10 +27,9 @@ public class Desk : MonoBehaviour
 
     public void Finish()
     {
-        if (false == SmallWheel.enabled && false == LargeWheel.enabled && false == Handle.enabled &&
-            false == Seat.enabled && false == Engine.enabled)
+        if (GetComponent<Car>().AssembledPartCount < 4)
         {
-            // 아무 것도 올라가있지 않다면 무시
+            // 조립된 파트 갯수가 4개 미만이면 무시
             return;
         }
 

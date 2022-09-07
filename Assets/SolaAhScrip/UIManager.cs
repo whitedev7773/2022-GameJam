@@ -6,8 +6,6 @@ using System;
 public class UIManager : MonoBehaviour
 {
     private naturalB natural = null;
-    [SerializeField] private TMP_Text coinTxt = null;
-    public int coins = 0;
     [SerializeField] private TMP_Text ironTxt = null;
     private int irons = 0;
     [SerializeField] private TMP_Text rubberTxt = null;
@@ -19,9 +17,6 @@ public class UIManager : MonoBehaviour
         natural = GetComponent<naturalB>();
     }
     private void Update() {
-        Txts();
-    }
-    private void Txts() {
-        coinTxt.text = coins + "개";
+
     }
 }

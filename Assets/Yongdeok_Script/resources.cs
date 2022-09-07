@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class resources : MonoBehaviour
 {
-    public int coin = 0;
+    public int coin = 100;
     public TextMeshProUGUI Coin_Display;
 
     public List<int> big_wheel = new List<int>();
@@ -17,6 +17,6 @@ public class resources : MonoBehaviour
 
     private void Update()
     {
-        Coin_Display.text = $"{coin}";
+        Coin_Display.text = $"{coin}¿ø";
     }
 }
