@@ -7,7 +7,7 @@ public class Main : MonoBehaviour
 {
     public void OnStartClick()
     {
-        SceneManager.LoadScene("SolaAhh2");
+        SceneManager.LoadScene("Game");
     }
 
     public void OnExitClick()
