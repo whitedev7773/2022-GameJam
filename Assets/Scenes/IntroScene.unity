@@ -1947,8 +1947,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 328.00006, y: -125}
-  m_SizeDelta: {x: 500, y: 20}
+  m_AnchoredPosition: {x: 328.00006, y: -130}
+  m_SizeDelta: {x: 500, y: 32.2684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &439300185
 MonoBehaviour:
@@ -2023,8 +2023,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -175, y: 0}
-  m_SizeDelta: {x: 100, y: 9}
+  m_AnchoredPosition: {x: -175, y: 0.8}
+  m_SizeDelta: {x: 100, y: 13.9689}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471777964
 MonoBehaviour:
@@ -2099,8 +2099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80, y: 0}
-  m_SizeDelta: {x: 300, y: 9}
+  m_AnchoredPosition: {x: -80, y: 0.5}
+  m_SizeDelta: {x: 300, y: 13.4272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &487560579
 MonoBehaviour:
@@ -2517,6 +2517,7 @@ GameObject:
   - component: {fileID: 658980512}
   - component: {fileID: 658980511}
   - component: {fileID: 658980510}
+  - component: {fileID: 658980514}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2573,7 +2574,7 @@ Canvas:
   m_GameObject: {fileID: 658980509}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2614,6 +2615,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &658980514
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658980509}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 800ce490fb395bf4b9fc7c4d0ac00a72, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &713732916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,7 +2776,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2103754463}
         m_TargetAssemblyTypeName: IntroBM, Assembly-CSharp
-        m_MethodName: Tutorial
+        m_MethodName: key
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3407,16 +3428,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416438381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1.15, y: 1.15, z: 1.15}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 658980513}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.2468, y: 0}
+  m_AnchoredPosition: {x: 122, y: 0}
   m_SizeDelta: {x: 1610.4, y: 901.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416438383
@@ -4310,8 +4331,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 328.00006, y: -275}
-  m_SizeDelta: {x: 500, y: 20}
+  m_AnchoredPosition: {x: 328.00006, y: -268.8658}
+  m_SizeDelta: {x: 500, y: 32.2684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1650694636
 MonoBehaviour:
@@ -4386,7 +4407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0, y: -65}
+  m_AnchoredPosition: {x: 0, y: -65}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664486427
@@ -4924,8 +4945,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 328.00006, y: -200}
-  m_SizeDelta: {x: 500, y: 20}
+  m_AnchoredPosition: {x: 328.00006, y: -200.0064}
+  m_SizeDelta: {x: 500, y: 32.2684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884202856
 MonoBehaviour:
@@ -5092,7 +5113,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2103754463}
         m_TargetAssemblyTypeName: IntroBM, Assembly-CSharp
-        m_MethodName: key
+        m_MethodName: Tutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

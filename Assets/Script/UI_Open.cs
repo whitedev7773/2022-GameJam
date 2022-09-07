@@ -8,36 +8,49 @@ public class UI_Open : MonoBehaviour
     public Animator Create;
     public Animator Collect;
 
-    public bool Open = false;
+    public SettingBM settingUI;
+
+    public bool AssembleOpen = false;
+    public bool BuyOpen = false;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Open)
+            if (AssembleOpen)
             {
                 Create.Play("Close");
             }
             else
             {
-                Collect.Play("Close");
+                if (BuyOpen)
+                {
+                    Collect.Play("Close");
+                    BuyOpen = false;
+                }
                 Create.Play("Open");
+                settingUI.settingPn.SetActive(false);
             }
-            Open = !Open;
+            AssembleOpen = !AssembleOpen;
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (Open)
+            if (BuyOpen)
             {
                 Collect.Play("Close");
             }
             else
             {
-                Create.Play("Close");
+                if (AssembleOpen)
+                {
+                    Create.Play("Close");
+                    AssembleOpen = false;
+                }
                 Collect.Play("Open");
+                settingUI.settingPn.SetActive(false);
             }
-            Open = !Open;
+            BuyOpen = !BuyOpen;
         }
     }
 }
