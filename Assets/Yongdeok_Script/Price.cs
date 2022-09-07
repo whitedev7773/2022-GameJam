@@ -15,7 +15,7 @@ public class Price : MonoBehaviour
         {
             data.coin -= pricedd;
             int per;
-            if (Random.Range(1, 101) < 30)
+            if (Random.Range(1, 101) < 10)
             {
                 per = 1;
             }
