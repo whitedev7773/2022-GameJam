@@ -6326,9 +6326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: {fileID: 325539619}
-  iron_display: {fileID: 1546761326}
-  rubber_display: {fileID: 1542354267}
-  fuel_display: {fileID: 0}
+  priceTxt: {fileID: 0}
 --- !u!114 &325539619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6341,9 +6339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e7208bab39b4446b4d0598e70f0719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iron: 3
-  rubber: 1
-  fuel: 0
+  pricedd: 0
+  uiM: {fileID: 0}
   data: {fileID: 1738991219}
   product: handle
 --- !u!114 &325539620
@@ -6845,6 +6842,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1395544337}
+  cunPerson: {fileID: 0}
+  personColor: []
   default_order: {fileID: 1793723893, guid: ccff4e2337ed9d4468a22d104e340565, type: 3}
   order_papers:
   - {fileID: 1411306266, guid: ccff4e2337ed9d4468a22d104e340565, type: 3}
@@ -7335,9 +7334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: {fileID: 490708582}
-  iron_display: {fileID: 315036946}
-  rubber_display: {fileID: 1404103161}
-  fuel_display: {fileID: 0}
+  priceTxt: {fileID: 0}
 --- !u!114 &490708582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7350,9 +7347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e7208bab39b4446b4d0598e70f0719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iron: 2
-  rubber: 2
-  fuel: 0
+  pricedd: 0
+  uiM: {fileID: 0}
   data: {fileID: 1738991219}
   product: small_wheel
 --- !u!114 &490708583
@@ -7745,6 +7741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitAmount: 3
+  randIndex: 0
   orderList:
   - {fileID: 1411306266, guid: ccff4e2337ed9d4468a22d104e340565, type: 3}
   - {fileID: 261565299, guid: ccff4e2337ed9d4468a22d104e340565, type: 3}
@@ -8883,6 +8880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitAmount: 3
+  randIndex: 0
   orderList:
   - {fileID: 1411306266, guid: ccff4e2337ed9d4468a22d104e340565, type: 3}
   - {fileID: 261565299, guid: ccff4e2337ed9d4468a22d104e340565, type: 3}
@@ -9784,9 +9782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: {fileID: 1218490740}
-  iron_display: {fileID: 1454827868}
-  rubber_display: {fileID: 0}
-  fuel_display: {fileID: 1230041463}
+  priceTxt: {fileID: 0}
 --- !u!114 &1218490740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9799,9 +9795,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e7208bab39b4446b4d0598e70f0719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iron: 2
-  rubber: 0
-  fuel: 4
+  pricedd: 0
+  uiM: {fileID: 0}
   data: {fileID: 1738991219}
   product: engine
 --- !u!114 &1218490741
@@ -10419,9 +10414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: {fileID: 1309007165}
-  iron_display: {fileID: 100502361}
-  rubber_display: {fileID: 316246362}
-  fuel_display: {fileID: 0}
+  priceTxt: {fileID: 0}
 --- !u!114 &1309007165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10434,9 +10427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e7208bab39b4446b4d0598e70f0719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iron: 2
-  rubber: 3
-  fuel: 0
+  pricedd: 0
+  uiM: {fileID: 0}
   data: {fileID: 1738991219}
   product: seat
 --- !u!114 &1309007166
@@ -18735,6 +18727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinTxt: {fileID: 17822089}
+  coins: 100
   ironTxt: {fileID: 1276457027}
   rubberTxt: {fileID: 186862920}
   oilTxt: {fileID: 753661387}
@@ -19363,9 +19356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: {fileID: 2128209712}
-  iron_display: {fileID: 0}
-  rubber_display: {fileID: 0}
-  fuel_display: {fileID: 0}
+  priceTxt: {fileID: 0}
 --- !u!222 &2068987099
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19918,9 +19909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: {fileID: 2128209712}
-  iron_display: {fileID: 2068987097}
-  rubber_display: {fileID: 403929513}
-  fuel_display: {fileID: 0}
+  priceTxt: {fileID: 0}
 --- !u!114 &2128209712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19933,9 +19922,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e7208bab39b4446b4d0598e70f0719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iron: 3
-  rubber: 2
-  fuel: 0
+  pricedd: 0
+  uiM: {fileID: 0}
   data: {fileID: 1738991219}
   product: big_wheel
 --- !u!114 &2128209713
