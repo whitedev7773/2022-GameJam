@@ -7,7 +7,7 @@ public class Main : MonoBehaviour
 {
     public void OnStartClick()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Game");
     }
 
     public void OnExitClick()

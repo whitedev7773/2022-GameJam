@@ -5,17 +5,17 @@ using UnityEngine;
 public class Price : MonoBehaviour
 {
     public int pricedd;
-    public UIManager uiM;
-    public resources data; //가지고 있는 iron, rubber, fuel의 값을 가져오기 위함
+    //public UIManager uiM;
+    public resources data; //가지고 있는 iron, rubber, fuel, coin의 값을 가져오기 위함
     public string product;
     
     public void Buy()
     {
-        if (uiM.coins >= pricedd)
+        if (data.coin >= pricedd)
         {
-            uiM.coins -= pricedd;
+            data.coin -= pricedd;
             int per;
-            if (Random.Range(1, 101) < 30)
+            if (Random.Range(1, 101) < 10)
             {
                 per = 1;
             }

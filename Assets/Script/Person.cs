@@ -24,13 +24,21 @@ public class Person : MonoBehaviour
     private int random_order_number = 0;
     private int ran = 0;
 
+    public Car car;
+
     // ó������ �� �ֹ� �Ϸ� �� ���ο� �ֹ������� ������ �ð�(��)
     public int order_delay;
 
     private void Start()
     {
+        InvokeStart();
+    }
+
+    public void InvokeStart()
+    {
         Invoke("StartFirst", order_delay);
     }
+
     private void Update() {
         SpriteChange();
     }
@@ -53,15 +61,19 @@ public class Person : MonoBehaviour
 
     public void PersonExit()
     {
-        time.start = true;
-        time.currentTime = time.maxTime;
+        time.start = false;
+        time.ResetTime();
+
+        order.sprite = order_papers[5];
+        message.text = "";
+
         animator.Play("Person_Out");
     }
 
     public void Order()
     {
+        car = GetComponent<Car>();
         PersonEnter();
-        Car car = new Car();
 
         int color_number = Random.Range(0, 3);
 

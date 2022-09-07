@@ -6,11 +6,23 @@ using UnityEngine.UI;
 
 public class SettingBM : MonoBehaviour
 {
-    [SerializeField] private GameObject settingPn;
+    public GameObject settingPn;
+    public UI_Open ui;
+
     public void Setting() {
         if (settingPn.activeSelf ) {
             settingPn.SetActive(false);
         }
-        else {settingPn.SetActive(true);}
+        else {
+            if (ui.AssembleOpen)
+            {
+                ui.Create.Play("Close");
+            }
+            else if (ui.BuyOpen)
+            {
+                ui.Collect.Play("Close");
+            }
+            settingPn.SetActive(true);
+        }
     }
 }

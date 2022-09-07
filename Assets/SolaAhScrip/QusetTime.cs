@@ -51,7 +51,7 @@ public class QusetTime : MonoBehaviour
     public void ResetTime()
     {
         start = false;
-        currentTime = 1;
+        currentTime = maxTime;
         qusetTimeGage.fillAmount = 1;
     }
 }

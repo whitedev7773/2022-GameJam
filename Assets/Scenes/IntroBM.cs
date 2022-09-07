@@ -12,12 +12,22 @@ public class IntroBM : MonoBehaviour
         if (keyPanel.activeSelf ) {
             keyPanel.SetActive(false);
         }
-        else {keyPanel.SetActive(true);}
-    }
-    public void Tutorial() {
-        if (tutorialPanel.activeSelf ) {
+        else
+        {
+            keyPanel.SetActive(true);
             tutorialPanel.SetActive(false);
         }
-        else {tutorialPanel.SetActive(true);}
+    }
+    public void Tutorial()
+    {
+        if (tutorialPanel.activeSelf )
+        {
+            tutorialPanel.SetActive(false);
+        }
+        else
+        {
+            tutorialPanel.SetActive(true);
+            keyPanel.SetActive(false);
+        }
     }
 }
