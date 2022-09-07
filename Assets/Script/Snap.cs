@@ -54,9 +54,9 @@ public class Snap : MonoBehaviour
             GetComponent<AudioSource>().pitch = Random.Range(0.7f, 1.7f);
             GetComponent<AudioSource>().Play();
         }
-        else if (target.tag == "LargeWheel" || LargeWheel.enabled)
+        else if (target.tag == "LargeWheel")
         {
-            if (data.big_wheel.Count <= 0)
+            if (data.big_wheel.Count <= 0 || LargeWheel.enabled)
             {
                 return;
             }
@@ -102,6 +102,7 @@ public class Snap : MonoBehaviour
         {
             if (data.engine.Count <= 0 || Engine.enabled)
             {
+                Debug.Log("¹«½Ã");
                 return;
             }
             if (data.engine[0] == 1)

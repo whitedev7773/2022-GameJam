@@ -8,6 +8,8 @@ public class UI_Open : MonoBehaviour
     public Animator Create;
     public Animator Collect;
 
+    public AudioSource sound_effect;
+
     public SettingBM settingUI;
 
     public bool AssembleOpen = false;
@@ -20,6 +22,7 @@ public class UI_Open : MonoBehaviour
         {
             if (AssembleOpen)
             {
+                sound_effect.Play();
                 Create.Play("Close");
             }
             else
@@ -29,6 +32,7 @@ public class UI_Open : MonoBehaviour
                     Collect.Play("Close");
                     BuyOpen = false;
                 }
+                sound_effect.Play();
                 Create.Play("Open");
                 settingUI.settingPn.SetActive(false);
             }
@@ -38,6 +42,7 @@ public class UI_Open : MonoBehaviour
         {
             if (BuyOpen)
             {
+                sound_effect.Play();
                 Collect.Play("Close");
             }
             else
@@ -47,6 +52,7 @@ public class UI_Open : MonoBehaviour
                     Create.Play("Close");
                     AssembleOpen = false;
                 }
+                sound_effect.Play();
                 Collect.Play("Open");
                 settingUI.settingPn.SetActive(false);
             }

@@ -13,9 +13,11 @@ public class Price : MonoBehaviour
     {
         if (data.coin >= pricedd)
         {
+            GetComponent<AudioSource>().pitch = Random.Range(0.9f, 1.1f);
+            GetComponent<AudioSource>().Play();
             data.coin -= pricedd;
             int per;
-            if (Random.Range(1, 101) < 10)
+            if (Random.Range(1, 101) < 5)
             {
                 per = 1;
             }

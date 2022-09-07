@@ -9,10 +9,7 @@ public class price_display : MonoBehaviour
     public Text priceTxt;
 
     void Update()
-    {   
-        if (priceTxt)
-        {
-            priceTxt.text = $"X {price.pricedd}";
-        }
+    {
+        priceTxt.text = $"X {price.pricedd}";
     }
 }
